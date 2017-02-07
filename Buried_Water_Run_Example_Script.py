@@ -2,7 +2,7 @@ import Buried_Water_Potentials as BWP
 import urllib
 import os
 
-for line in open('pdb_list_example.txt'):
+for line in open('master_pdb_list.txt'):
     #argument is the file for the list of all PDB files to analyze
     try:
         line = str(line).strip()
