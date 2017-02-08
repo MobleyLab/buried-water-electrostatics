@@ -45,4 +45,4 @@ Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) whi
 
 `> python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
 
-and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files.
+and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files. It can be loaded along with the pdb file used to create the "fake" pdb file to verify that the software is working correctly.
