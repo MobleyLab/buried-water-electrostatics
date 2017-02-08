@@ -17,6 +17,7 @@ The `master_pdb_list.txt` PDB codes were culled from the Dunbrack PISCES Protein
 - Maximum Chain Length - 10000; 
 - skipped non-X-ray and CA-only entries; 
 - culled pdbs by chain, not entry. 
+
 This specification will result in a list of PDBs fulfill these requirements, but will contain multiple entries for different chains in the same PDB file. To produce the `master_pdb_list.txt`, the four letter codes were stripped from the list produced by the PISCES Server, and written to a 1-column text file, and multiple entreis from the same protein were deleted, leaving only one entry from each protein.
 
 Some of the proteins culled by this server have entries in the Protein Data Bank, but have atom serial numbers that are too big for the PDB format (.pdb) (100k+ atom serial numbers are unsupported - http://www.bmsc.washington.edu/CrystaLinks/man/pdb/part_62.html). You will notice that the url-retrieval for these files will result produce a "{}.pdb" file containing the following html script:
