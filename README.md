@@ -43,6 +43,6 @@ and the ...Example_Script,py will terminate. These proteins do not have .pdb for
 
 Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) which will use a similar protocol to `Buried_Water_Potentials.py` to analyze a pdb file, and output a "fake" pdb file containing particles at the positions of the buried waters of the input pdb file, with beta factors corresponding to their burial coefficients. This is a useful sanity checking script for the analysis of the buried waters (in VMD, coloring by Beta factor, the buried waters should appear in blue, moving through white for slightly buried waters, and red for unburied waters). It is run as follows:
 
-`python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
+`> python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
 
 and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files.
