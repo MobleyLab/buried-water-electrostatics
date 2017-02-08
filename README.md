@@ -2,13 +2,13 @@
 
 We examined the electrostatic potential at the locations of buried waters within proteins to see if this exhibited any asymmetric behavior (previous work we had done suggested perhaps it might) and found none. Here's the code to reproduce.
 
-The file `Buried_Water_Potentials.py` is a python module containing the function "`f`" which takes a PDB file as input, and uses OpenEye Scientific modules (`oechem`, `oeszmap`, `oegrid`, `oequacpac`, and `oezap`) to analyse the electrostatics around each buried water in the protein file.
+The file `Buried_Water_Potentials.py` is a python module containing the function "`f`" which takes a PDB file as input, and uses OpenEye Scientific modules (`oechem`, `oeszmap`, `oegrid`, `oequacpac`, and `oezap`) to analyse the electrostatics around each buried water in the protein file, outputting the Burial Coefficient (a measure of how buried the water is in the protein -- 1 for fully buried, 0 for not buried at all), the Potential Energy (in kcal/mole), and the B factor (temperature factor, a measure of the thermal fluctuation of the water during crystallography).
 
-`Buried_Water_Run_Example_Script.py` is a python script that will run through the `master_pdb_list.txt`, extract the four-letter PDB code from each line, download the corresponding file from the Protein Data Bank, run the `Buried_Water_Potentials` module on it (which will output a file containing analysis information, or output an error), and delete the PDB file, before moving on to the next.
+`Buried_Water_Run_Example_Script.py` is a python script that will run through the `master_pdb_list.txt` (a one-column list of 4-letter PDB codes), extract the four-letter PDB code from each line, download the corresponding file from the Protein Data Bank, run the `Buried_Water_Potentials`  module `f` function on it (which will output a file containing analysis information, or output an error, if there is a problem reading the file), and delete the PDB file, before moving on to the next.
 
-WARNING: `master_pdb_list.txt` contains the four-letter codes for ~12k PDB files. This master list may need to be split in to smaller lists, to split computation time in to more manageable segments, but the underlying work flow will be identitcal (the `Buried_Water_Run_Example_Script.py` can be run on a list of any length, provided that it contains one column of four-letter PDB codes). 
+__WARNING__: `master_pdb_list.txt` contains the four-letter codes for ~12k PDB files. This master list may need to be split in to smaller lists, to split computation time in to more reasonable segments, but the underlying work flow will be identitcal (the `Buried_Water_Run_Example_Script.py` can be run on a list of any length, provided that it contains one column of four-letter PDB codes). 
 
-The `master_pdb_list.txt` PDB codes were culled from the Dunbrack PISCES Protein Sequence Culling Server: http://dunbrack.fccc.edu/PISCES.php with the following stipulations: 
+The `master_pdb_list.txt` PDB codes were culled from the Dunbrack PISCES Protein Sequence Culling Server: http://dunbrack.fccc.edu/PISCES.php with the following requirements: 
 - Maximum Percentage Identity - 25; 
 - Minimum Resolution - 0.0; 
 - Maximum Resolution - 3.0; 
@@ -37,4 +37,6 @@ Some of the proteins culled by this server have entries in the Protein Data Bank
 </html>
 ```
 
-And the ...Example_Script,py will terminate. These proteins do not have .pdb formatted files to download on the PDB database, thus the url-retrieval for them fails. The Buried_Water_Run_Example_Script.py script will output an error for the analysis of these files and terminate.
+and the ...Example_Script,py will terminate. These proteins do not have .pdb formatted files to download on the PDB database, thus the url-retrieval for them fails. The Buried_Water_Run_Example_Script.py script will output an error for the analysis of these files, and terminate.
+
+`buried_wats.slurm` is an example of a script to run the analysis on a computing cluster.
