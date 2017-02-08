@@ -39,4 +39,4 @@ Some of the proteins culled by this server have entries in the Protein Data Bank
 
 and the ...Example_Script,py will terminate. These proteins do not have .pdb formatted files to download on the PDB database, thus the url-retrieval for them fails. The Buried_Water_Run_Example_Script.py script will output an error for the analysis of these files, and terminate.
 
-`buried_wats.slurm` is an example of a script to run the analysis on a computing cluster.
+`buried_wats.slurm` is an example of a script to run the analysis on a computing cluster. It will run the `Buried_Water_Run_Example_Script.py` on the `pdb_master_list.txt` and print the console output to `buried_wats_logfile.log`. 
