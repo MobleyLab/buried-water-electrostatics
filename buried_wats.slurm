@@ -31,12 +31,13 @@ echo "=================================== SLURM JOB ============================
 echo
 
 export OE_LICENSE="$HOME/oe_license.txt"
+
 cd $SLURM_SUBMIT_DIR
 echo 'Working Directory:'
 pwd
 
 date
 
-python cluster_script_11.py > buried_wat_logfile_11.log
+python Buried_Water_Run_Example_scipt.py > buried_wat_logfile.log
 
 date
