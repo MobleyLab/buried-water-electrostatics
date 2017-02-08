@@ -40,3 +40,9 @@ Some of the proteins culled by this server have entries in the Protein Data Bank
 and the ...Example_Script,py will terminate. These proteins do not have .pdb formatted files to download on the PDB database, thus the url-retrieval for them fails. The Buried_Water_Run_Example_Script.py script will output an error for the analysis of these files, and terminate.
 
 `buried_wats.slurm` is an example of a script to run the analysis on a computing cluster. It will run the `Buried_Water_Run_Example_Script.py` on the `pdb_master_list.txt` and print the console output to `buried_wats_logfile.log`. 
+
+Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) which will use a similar protocol to `Buried_Water_Potentials.py` to analyze a pdb file, and output a "fake" pdb file containing particles at the positions of the buried waters of the input pdb file, with beta factors corresponding to their burial coefficients. This is a useful sanity checking script for the analysis of the buried waters (in VMD, coloring by Beta factor, the buried waters should appear in blue, moving through white for slightly buried waters, and red for unburied waters). It is run as follows:
+
+`python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
+
+and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files.
