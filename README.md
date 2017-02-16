@@ -1,4 +1,4 @@
-# Analysis of the Electrostatic Potentials of Buried Waters in Crystallographic Protiens
+# Analysis of the Electrostatic Potentials of Buried Waters in Protein Crystals
 
 Motivation and Goal
 -------------------
