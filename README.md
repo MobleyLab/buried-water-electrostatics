@@ -3,7 +3,7 @@
 Motivation and Goal
 -------------------
 
-We examined the electrostatic potential at the locations of buried waters within proteins to see if this exhibited any asymmetric behavior -- [previous work we had done](http://pubs.acs.org/doi/abs/10.1021/jp709958f) (Mobley et al. 2008, J. Phys. Chem) suggested perhaps it migh -- and found none. 
+We examined the electrostatic potential at the locations of buried waters within proteins to see if this exhibited any asymmetric behavior -- [previous work we had done](http://pubs.acs.org/doi/abs/10.1021/jp709958f) (Mobley et al. 2008, J. Phys. Chem) suggested perhaps it might -- and found none. 
 
 We built a list of ~12,000 high-resolution PDB files (criterea and culling method laid out below), examined the electrostatic potential at the position of each of the buried waters in every file, and plotted the results in a histogram (which is shown in the file `Elec_Pot_Hist_b_fac_25.png`).
 
