@@ -8,12 +8,13 @@ from openeye.oezap import *
 
 def OutputPotentialData ( file ):
 
-    # Inputs
+    # Parameters
     # ------
     
-    #   PDB file to be analyzed
+    #   file: name of PDB file to be analyzed
+    #   i.e. "{four_letter_code}.pdb"
 
-    # Output
+    # Returns
     # ------
     
     #    7-column data file containing the
