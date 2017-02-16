@@ -9,7 +9,7 @@ for line in open('master_pdb_list.txt'):
         print "Working on", line
         urllib.urlretrieve('http://www.rcsb.org/pdb/files/%s.pdb' % line, '%s.pdb' % line)
         PdbFile = '%s.pdb' % line
-        BWP.f(PdbFile)
+        BWP.OutputPotentialData(PdbFile)
     	print "Finished analysis without error :)"
         os.remove(PdbFile)
     except IndexError:
