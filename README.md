@@ -46,3 +46,15 @@ Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) whi
 `> python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
 
 and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files. It can be loaded along with the pdb file used to create the "fake" pdb file to verify that the software is working correctly.
+
+## Authors and contributors
+
+This is a project which was originally begun by Hanna Liao, an undergraduate in the Mobley lab, after a suggestion from an audience member during a talk some years ago on water asymmetry. It went unfinished until David Wych rotated in the Mobley lab in Winter 2017; he was able to finish off this work.
+
+We are also particularly grateful to James Haigh of OpenEye Scientific Software, on the support team, for his help with aspects of this project such as on how to calculate water burial coefficients.
+
+If this were a paper, the authors list would read this way, presumably:
+- David Wych (UCI)
+- Hanna Liao (UC Berkeley)
+- James Haigh (OpenEye)
+- David L. Mobley (UCI)
