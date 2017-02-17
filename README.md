@@ -55,7 +55,7 @@ and the ...Example_Script,py will terminate. These proteins do not have .pdb for
 
 The file `plotting_elec_pot_data.py` is both an analysis and plotting script: it reads in `buried_water_data_v1.dat`, picks out only the waters with B-factors less than 25, and plots a hisogram of all of the data (fitted with a gaussian), and a separate histogram plotting only the data from waters with B-factors less than 25 (also fitted with a gaussian). It also prints to the console the information from the fit, including the Mean, Standard Deviation, and the Standard Error for each fit. Plotting, fitting, and analysis is done with `matplotlib.pyplot`, `scipy.curve_fit` and `numpy` python modules. An example of the plot produced by this analysis is also included: `Elec_Pot_Hist_b_fac_25.png`.
 
-The file `DWCode.py` is a helpful module used to make readin in, and writing out, of data for plotting and analysis easier.
+The file `DWCode.py` is a helpful module used to make reading in and writing out of data for plotting and analysis easier.
 
 Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) which will use a similar protocol to `Buried_Water_Potentials.py` to analyze a pdb file, and output a "fake" pdb file containing particles at the positions of the buried waters of the input pdb file, with beta factors corresponding to their burial coefficients. This is a useful sanity checking script for the analysis of the buried waters (in VMD, coloring by Beta factor, the buried waters should appear in blue, moving through white for slightly buried waters, and red for unburied waters). It is run as follows:
 
