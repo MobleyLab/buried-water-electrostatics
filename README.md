@@ -59,17 +59,17 @@ and the ...Example_Script,py will terminate. These proteins do not have .pdb for
 
 **Data, Analysis, and Plotting**
 
-The file `buried_water_data_v1.dat` is three-column data file containing the aggregate of all of the Potential, Buried, and B-factor data produced by our analysis (~2.5 million individual waters analyzed). It is included in compressed form.
+The file `buried_water_data_v1.dat` is three-column data file containing the aggregate of all of the Potential, Burial, and B-factor data produced by our analysis (~2.5 million individual waters analyzed). It is included in compressed form.
 
 The file `plotting_elec_pot_data.py` is both an analysis and plotting script: it reads in `buried_water_data_v1.dat` and plots a hisogram of all of the data (fitted with a gaussian). It also picks out only the waters with B-factors less than 25, and plots a separate histogram of only the data from those waters (also fitted with a gaussian). It also prints to the console the information from the fit, including the Mean, Standard Deviation, and the Standard Error for each fit. Plotting, fitting, and analysis is done with `matplotlib.pyplot`, `scipy.curve_fit` and `numpy` python modules. An example of the plot produced by this analysis is also included: `Elec_Pot_Hist_b_fac_25.png`.
 
-The file `DWCode.py` is a helpful module used to make it easier to read in column data as an array, and output arrays to column data files.
+The file `DWCode.py` is a helpful module used to make it easier to read in column data as python arrays, and output arrays to column data files.
 
 Also included is an example of a script (`Buried_Wat_Beta_PDB_Generator.py`) which will use a similar protocol to `Buried_Water_Potentials.py` to analyze a pdb file, and output a "fake" pdb file containing particles at the positions of the buried waters of the input pdb file, with beta factors corresponding to their burial coefficients. This is a useful sanity checking script for the analysis of the buried waters (in VMD, coloring by Beta factor, the buried waters should appear in blue, moving through white for slightly buried waters, and red for unburied waters). It is run as follows:
 
 `> python Buried_Wat_Beta_PDB_Generator.py {4-letter-PDB-code}.pdb`
 
-and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files. It can be loaded along with the pdb file used to create the "fake" pdb file to verify that the software is working correctly.
+and outputs a file named `{4-letter-PDB-code}_wats_burial_beta.pdb`. This often takes quite a while to complete for large PDB files. It can be loaded along with the original pdb file to verify that the software is working correctly.
 
 ## Authors and contributors
 
