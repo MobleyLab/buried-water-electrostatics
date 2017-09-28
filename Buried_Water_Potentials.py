@@ -7,26 +7,26 @@ from openeye.oequacpac import *
 from openeye.oezap import *
 
 def OutputPotentialData ( file ):
-    
+
     # Parameters
     # ------
-
+    
     #   file: name of PDB file to be analyzed
     #   i.e. "{four_letter_code}.pdb"
 
     # Returns
     # ------
-
+    
     #    7-column data file containing the
     #    index and x, y, and z, coordinates
     #    of each water molecule, the Burial
     #    Coefficient -- 0, unburied, to
     #    1, buried -- the Electric Potential
     #    (in kcal/mole), and the B-factor
-
+        
     #    (n.b. output data file contains
-    #    a header)    
-
+    #    a header)
+    
     # Extracting the PDB code from the input file
     # and setting the output file name
     filename = file[:-4]
@@ -119,7 +119,7 @@ def OutputPotentialData ( file ):
     if zap.CalcPotentialGrid(grid):
         # Creating the output data file
         with open(out_filename, 'w') as f:
-            f.write("num, x, y, z, Burial_Coef., Potential_Energy, B_factor \n")
+            f.write("idx, x, y, z, Burial_Coef., Potential_Energy, B_factor \n")
             for atom in wat.GetAtoms():
                 if OEGetResidueIndex(atom)==OEResidueIndex_HOH:
                     res = OEAtomGetResidue(atom)
