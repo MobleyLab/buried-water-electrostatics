@@ -82,3 +82,9 @@ If this were a paper, the authors list would read this way, presumably:
 - Hanna Liao (UC Berkeley)
 - James Haigh (OpenEye)
 - David L. Mobley (UCI)
+
+## Citing this code
+
+Releases of this code are assigned unique DOIs via Zenodo.
+You can cite this code using the latest Zenodo DOI, [![DOI](https://zenodo.org/badge/81265748.svg)](https://zenodo.org/badge/latestdoi/81265748)
+
